@@ -33,3 +33,32 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+
+/* 分页与翻页：页码/页大小/上下页，查询条件由调用方保留 */
+.pagination { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; font-size: 13px; }
+.pagination .page-info { color: var(--muted); }
+.pagination select, .pagination input { border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; font-size: 13px; }
+.pagination input { width: 64px; text-align: center; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* 联合结项：候选对比选择与结项评估明细 */
+.closeout-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.closeout-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+.closeout-card h3 { margin: 0 0 10px; font-size: 14px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; }
+.form-grid label span { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.form-grid input, .form-grid select { width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; }
+.candidate-list { display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow: auto; }
+.candidate-item { border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; font-size: 13px; }
+.candidate-item.disabled { background: #f8fafc; color: var(--muted); }
+.candidate-item .candidate-meta { margin-top: 4px; font-size: 12px; color: var(--muted); }
+.tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; }
+.tag.significant { background: #dcfae6; color: #15803d; }
+.tag.not-significant { background: #fef3c7; color: #b45309; }
+.tag.archived { background: #e0e7ff; color: #3730a3; }
+.tag.draft { background: #f1f5f9; color: var(--muted); }
+.detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; font-size: 13px; }
+.detail-grid dt { color: var(--muted); }
+.detail-grid dd { margin: 0 0 4px; font-weight: 600; }
+.detail-banner { background: #f0f7ff; border: 1px solid #cfe2ff; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; }
+.back-link { margin-bottom: 10px; }
